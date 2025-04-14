@@ -2,15 +2,16 @@
 
 # Bash Lab 1 (Graded)
 
-Create a bash script that takes a directory as an argument and prints the list of
-^files and how many lines and words are in each file.
+Create a bash script that takes a directory as an argument and prints the list of files and how many lines and words are in each file. If the directory doesn't exist it should notify user.
 
-*input*
-Use the directory data in this repo as the Directory name 
+## Input
+
+Use the directory data in this repo as the Directory name
+
 Example: 
 ./scriptname.sh data
 
-*output*
+## Output
 ```
 ==========================================================
 =              Files in Directory: data                  =
@@ -25,4 +26,11 @@ file_6.txt has       93 lines and      885 words
 file_7.txt has       75 lines and      714 words
 file_8.txt has       21 lines and      214 words
 file_9.txt has       45 lines and      430 words
+```
+## Errors
+The script should work if the directory does not exist. The output should ONLY be:
+
+```
+$ ./scriptname.sh data1
+Directory data1 does not exist
 ```
