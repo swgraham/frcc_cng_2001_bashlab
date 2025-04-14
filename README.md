@@ -22,6 +22,13 @@ The contents of file `data/file_1.txt` with the word Knowledge replaced with the
 
 Use `read`,`cat` and the variable expansion `${}` for regular expressions: `${varname/sometext/othertext}`
 
+## Steps
+1. `cd ~`
+2. clone this repo: `git clone https://github.com/swgraham/frcc_cng_2001_bashlab.git`
+3. `cd frcc_cng_2001_bashlab`
+4. You should now have a `data/file_1.txt` to process as described above.
+5. When finished, upload your bash script and a screenshot of your output. 
+
 # Bash Lab 2 (Graded)
 
 Create a bash script that takes a directory as an argument and prints the list of files and how many lines and words are in each file. If the directory doesn't exist it should notify user.
