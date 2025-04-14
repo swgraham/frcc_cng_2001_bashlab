@@ -1,6 +1,28 @@
 # frcc/cng2001_bashlab
 
+
 # Bash Lab 1 (Graded)
+
+Write a bash script that:
+
+1.  Reads a Name
+2.  displays the contents of the file `data/file_1.txt` **but** changes the word Knowledge to the inputed name
+
+## Input
+Prompt the user for a name, example: 
+```
+$ ./scriptname.sh
+What is your name?
+SomeName
+```
+## Output
+The contents of file `data/file_1.txt` with the word Knowledge replaced with the input name	
+
+## Hints
+
+Use `read`,`cat` and the variable expansion `${}` for regular expressions: `${varname/sometext/othertext}`
+
+# Bash Lab 2 (Graded)
 
 Create a bash script that takes a directory as an argument and prints the list of files and how many lines and words are in each file. If the directory doesn't exist it should notify user.
 
@@ -28,7 +50,9 @@ file_8.txt has       21 lines and      214 words
 file_9.txt has       45 lines and      430 words
 ```
 ## Errors
-The script should work if the directory does not exist. The output should ONLY be:
+1. The script should ONLY output the above, if there are directories in the directory `data` they should be ignored.
+
+2. The script should work if the directory does not exist. The output should ONLY be:
 
 ```
 $ ./scriptname.sh data1
