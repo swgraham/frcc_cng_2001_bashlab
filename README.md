@@ -33,18 +33,25 @@ Use `read`,`cat` and the variable expansion `${}` for regular expressions: `${va
 
 Create a bash script that takes a directory as an argument and prints the list of files and how many lines and words are in each file. If the directory doesn't exist it should notify user.
 
+## Script Name
+
+script should be named `username_lab2.sh` where username is YOUR userid.  Ex: `swgraham_lab2.sh`
+
 ## Input
 
-Use the directory data in this repo as the Directory name
+Use the directories `data` and `data2` in this repo as the Directory names
 
 Example: 
-./scriptname.sh data
+./swgraham_lab2.sh data
 
 ## Output
 ```
+$ ./swgraham_lab2.sh data
 ==========================================================
+=             Script Author: Scott Graham                =
 =              Files in Directory: data                  =
 ==========================================================
+somedir: Skipping, it is a directory
 file_1.txt has       21 lines and      209 words
 file_10.txt has       69 lines and      665 words
 file_2.txt has       22 lines and      219 words
@@ -57,11 +64,23 @@ file_8.txt has       21 lines and      214 words
 file_9.txt has       45 lines and      430 words
 ```
 ## Errors
-1. The script should ONLY output the above, if there are directories in the directory `data` they should be ignored.
+1. The script should output SIMILAR to the above
+  a. It **must** have your name in the output.
+  b. It **must** have the directory you used. This script should work on both `data` and `data2` directories
+  c. If there are directories in the directory passed, Note that you are skipping them as in output above.
 
-2. The script should work if the directory does not exist. The output should ONLY be:
+2. If no argument is passed at the commandline the script should respond with the usage and exit with code 101.
+```
+$ ./swgraham_lab2.sh
+Usage: ./swgraham_lab2.sh dirname
+$ echo $?
+101
+```
 
-```
-$ ./scriptname.sh data1
-Directory data1 does not exist
-```
+3. If the Directory does not exist, the script should output and exit with code 102:
+   ```
+   $ lab2.sh missingdirectory
+   Error: the directory "missingdirectory" does not exist
+   $ echo $?
+   101
+   ```
