@@ -78,9 +78,9 @@ $ echo $?
 ```
 
 3. If the Directory does not exist, the script should output and exit with code 102:
-   ```
-   $ lab2.sh missingdirectory
-   Error: the directory "missingdirectory" does not exist
-   $ echo $?
-   101
-   ```
+```
+$ lab2.sh missingdirectory
+Error: the directory "missingdirectory" does not exist
+$ echo $?
+102
+```
