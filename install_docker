@@ -21,3 +21,6 @@ sudo systemctl is-active docker
 
 # Step 5: Verify Installation
 sudo docker run hello-world
+
+# Step 6: RUn this ...
+docker run -d -p 8080:80 docker/welcome-to-docker
